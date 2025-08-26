@@ -1,0 +1,9 @@
+PLACEHOLDER: Replace this file with an actual screenshot of a passing CI plan check
+
+This should be a PNG image showing:
+- GitHub Actions workflow run
+- Terraform plan step passing
+- Green checkmarks for all validation steps
+- Example filename: ci-plan.png
+
+You can take a screenshot of your GitHub Actions workflow after a successful terraform plan run and save it as this file.

@@ -1,32 +1,10 @@
-name: Terraform Apply
-
+name: terraform-apply
 on:
-  workflow_dispatch:
-  push:
-    branches: [ "main" ]
-
-permissions:
-  contents: read
-
+  workflow_dispatch: {}   # manual only, never auto
 jobs:
   apply:
+    if: github.ref == 'refs/heads/main'   # only on main
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-
-      - name: Setup Terraform
-        uses: hashicorp/setup-terraform@v3
-        with:
-          terraform_version: 1.9.5
-
-      - name: Terraform init
-        run: terraform init -input=false
-
-      - name: Terraform plan
-        run: terraform plan -input=false -out=tfplan
-
-      - name: Terraform apply
-        run: terraform apply -input=false -auto-approve tfplan
-        env:
-          TF_VAR_aws_region: us-east-1
+      - run: echo "Apply is disabled until real AWS creds are configured."
+        shell: bash
