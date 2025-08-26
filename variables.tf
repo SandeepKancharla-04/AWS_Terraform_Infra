@@ -8,6 +8,16 @@ variable "aws_region" {
   default = "us-east-1"
 }
 
+variable "aws_access_key" {
+  type    = string
+  default = "mock_access_key"
+}
+
+variable "aws_secret_key" {
+  type    = string
+  default = "mock_secret_key"
+}
+
 variable "vpc_cidr" {
   type    = string
   default = "10.0.0.0/16"

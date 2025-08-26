@@ -8,9 +8,10 @@ jobs:
   plan:
     runs-on: ubuntu-latest
     env:
-      AWS_ACCESS_KEY_ID: dummy
-      AWS_SECRET_ACCESS_KEY: dummy
+      AWS_ACCESS_KEY_ID: mock_access_key
+      AWS_SECRET_ACCESS_KEY: mock_secret_key
       AWS_DEFAULT_REGION: us-east-1
+      AWS_EC2_METADATA_DISABLED: "true"
     permissions:
       contents: read
       pull-requests: write
