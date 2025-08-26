@@ -32,6 +32,8 @@ jobs:
         run: terraform validate
       - name: TFLint Setup
         uses: terraform-linters/setup-tflint@v4
+      - name: Initialize TFLint
+        run: tflint --init
       - name: Run tflint
         run: tflint
       - name: Terraform Plan
